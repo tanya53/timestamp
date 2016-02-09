@@ -3,37 +3,46 @@
 <html>
 
 	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
+		<title>timestamp microservice</title>
 		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+		<link href="public/css/main.css" rel="stylesheet" type="text/css">
+		<!-- Latest compiled and minified CSS -->
+
 	</head>
 
-	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
-	</header>
+	<body class="container">
+		<head>
+		<h1>API Basejump: Timestamp microservice</h1>
+		</head>
+		<div>
+			<p>User stories:</p>
+			<ol>
+				<li>I can use a string as a aramter, and it will check to see whether
+				 that string either contains a unix timestamp or a natural language date 
+				 (example: January 1, 2016)</li>
+				 <li>If it does, it returns both the Unix timestamp and the natural
+				 language form of that date.</li>
+				 <li> If it does not contain a date or Unix timestamp, it return null for
+				 those properties.</li>
+			</ol>
+		</div>
+		<div>
+			<h3>Example usage:</h3>
+			<p class="example">https://timestamp-tanya53.c9users.io/December%2015,%20215</p>
+			<p class="example">https://timestamp-tanya53.c9users.io/1450137600</p>
+		</div>
+		<div>
+			<h3>Example output:</h3>
+			<p class="example">{"unix":1450137600, "natural":"December 15, 2015"}</p>
+		</div>
 
-	<body>
-		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
-		</div>
-	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</body>
+	
 
 </html>

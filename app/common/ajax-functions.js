@@ -1,8 +1,10 @@
 'use strict';
 
 var appUrl = window.location.origin;
+console.log("appurl",appUrl);
 var ajaxFunctions = {
    ready: function ready (fn) {
+      console.log("ajax ready");
       if (typeof fn !== 'function') {
          return;
       }
@@ -15,6 +17,7 @@ var ajaxFunctions = {
    },
    ajaxRequest: function ajaxRequest (method, url, callback) {
       var xmlhttp = new XMLHttpRequest();
+      console.log("ajaxRequest");
 
       xmlhttp.onreadystatechange = function () {
          if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
@@ -23,6 +26,7 @@ var ajaxFunctions = {
       };
 
       xmlhttp.open(method, url, true);
+      console.log("trying to send");
       xmlhttp.send();
    }
 };
